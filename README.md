@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# DSA
-=======
 # 📘 Data Structures & Algorithms (DSA) Repository
 
 ## 🚀 Overview
@@ -101,4 +98,4 @@ The repository follows a **pattern-based approach** for efficient learning.
 ---
 
 ## 📂 Repository Structure
->>>>>>> da02556 (added readme file)
+
