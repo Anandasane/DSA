@@ -3,6 +3,14 @@ import java.util.Arrays;
 
 /*
 implementing different functions on arrays such as sort functions and understanding deep copy and shallow copy
+
+
+deep copy: creating a new array and copying the elements of the original array to the new array. 
+changes made to the new array will not affect the original array
+
+
+shallow copy: creating a new reference variable and pointing it to the original array.
+changes made to the new reference variable will affect the original array
  */
 
 

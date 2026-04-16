@@ -30,6 +30,7 @@ public class question2 {
         for(int i=0; i<count; i++){
             System.out.print(primes[i] + " ");
         }
+        sc.close();
     } 
     
 }
