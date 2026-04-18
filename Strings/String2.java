@@ -11,7 +11,7 @@ public class String2 {
         
     }
 
-    static int getLengthOfStrint(String str){
+static int getLengthOfString(String str){
          char[] arr = str.toCharArray();
          int len = arr.length;
          return len;
@@ -39,14 +39,28 @@ public class String2 {
         return reverse;
     }
     
+    static boolean isPallindrome(String str){
+        String original = str;
+        String reverse = reverseString(original);
+        // compare
+        for(int i=0; i<original.length();i++){
+            char ch1 = original.charAt(i);
+            char ch2 = reverse.charAt(i);
+                if(ch1!=ch2){
+                    return false;//no match
+                }
+            }
+        return true;
+    }
     
 
 
     public static void main(String[] args) {
         String str = "Anand";
         printString(str);
-        System.out.println(getLengthOfStrint(str));
+        System.out.println(getLengthOfString(str));
         System.out.println(getVowelCount(str));
         System.out.println(reverseString(str));
+        System.out.println(isPallindrome(str));
     }
 }
