@@ -16,8 +16,34 @@ public class Sort0s1s2s {
             arr[i] = sc.nextInt();
         }
 
-        for(int i = 0; i<n;i++){
-            if
+        int low = 0 , mid = 0 , high = n-1;
+
+        while(mid<=high){ // while loop to sort the array
+
+            if(arr[mid] == 0){ // if the element is 0 then swap it with the element at the low index and increment the low and mid index
+                int temp = arr[low];
+                arr[low] = arr[mid];
+                arr[mid] = temp;
+                low++;
+                mid++;
+            }
+            else if(arr[mid] == 1){ // if the element is 1 then increment the mid index
+                mid++;
+            }
+            else if(arr[mid] == 2){ // if the element is 2 then swap it with the element at the high index and decrement the high index
+                int temp = arr[high];
+                arr[high] = arr[mid];
+                arr[mid] = temp;
+                high--;
+            }
         }
+
+        for(int i = 0 ; i<n ; i++){ // printing the sorted array
+            System.out.print(arr[i]+" ");
+        }
+
+        sc.close();
+
+        
     }
 }
