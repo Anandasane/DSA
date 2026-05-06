@@ -1,7 +1,5 @@
 package Sorting;
-/*
-you are given an array you have to check if it is Sorted
-*/
+// you are given an array you have to check if it is Sorted
 
 import java.util.Scanner;
 
