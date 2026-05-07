@@ -31,6 +31,7 @@ public class mergeSort {
         // Sort using merge sort (in-place effect via merge into the original array)
         mergeSort(arr, 0, n - 1);
         System.out.println("Sorted Array is: " + Arrays.toString(arr));
+        sc.close();
     }
 
     // Recursively sorts arr[left..right] using divide-and-conquer.

@@ -26,6 +26,7 @@ public class checkIfSorted {
                 return;
             }
         }
+        sc.close();
     }
     
 }

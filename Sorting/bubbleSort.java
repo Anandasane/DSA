@@ -45,6 +45,7 @@ public class bubbleSort {
 
         // Print final sorted array
         System.out.println("Sorted Array is: " + Arrays.toString(arr));
+        sc.close();
     }
 }
 
