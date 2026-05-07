@@ -42,6 +42,23 @@ public class firstAndLastOccurrence {
             }
         }
 
-        //
+        // Find last occurrence
+        low = 0, high = n - 1;
+        while (low <= high) {   
+            int mid = low + (high - low) / 2;
+            if (arr[mid] == key) {
+                lastOcc = mid;
+                low = mid + 1;
+            } else if (arr[mid] < key) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+
+        System.out.println("First Occurrence: " + firstOcc);
+        System.out.println("Last Occurrence: " + lastOcc);
+        sc.close();
+        
     }
 }
