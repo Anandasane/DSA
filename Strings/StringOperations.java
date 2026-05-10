@@ -1,6 +1,6 @@
 package strings;
 
-public class String2 {
+public class StringOperations       ~ {
 
     static void printString(String str){
         int n = str.length();
@@ -53,6 +53,15 @@ static int getLengthOfString(String str){
         return true;
     }
     
+    static boolean isPallindrome2(String str){//using binary search approach
+        int lo = 0 , hi = s.length()-1;
+        while(lo<= hi){
+            if(s.charAt(lo)!=s.charAt(hi))return false;
+            lo++;
+            hi--;   
+        }
+        return true;
+    }
 
 
     public static void main(String[] args) {
