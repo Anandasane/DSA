@@ -26,6 +26,12 @@ public class swapAlternate {
             System.out.print(i + " ");
         }
         System.out.println();
+
+        getSwappedArray(arr);
+        System.out.println("after using different method");
+        for (int i :arr){
+            System.out.print(i+" ");
+        }
     }
 
     public static void SwappingElements(int x[]){
@@ -46,6 +52,25 @@ public class swapAlternate {
             x[i + 1] = temp;
         }
         
+    }
+
+    // Method signature: public static int[] ...
+    public static int[] getSwappedArray(int[] arr) {
+        int n = arr.length;
+        int[] result = new int[n]; // Create a NEW array
+
+        // Copy and swap logic
+        for (int i = 0; i < n - 1; i += 2) {
+            result[i] = arr[i + 1];     // Put next element first
+            result[i + 1] = arr[i];     // Put current element second
+        }
+
+        // If odd length, copy the last element
+        if (n % 2 != 0) {
+            result[n - 1] = arr[n - 1];
+        }
+
+        return result; // Return the new array
     }
 
 }

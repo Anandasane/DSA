@@ -3,7 +3,7 @@ import java.util.Scanner;
  it will return the character with lowest value in the string.
  
 
-brute force approach with time complexity of 
+brute force approach with time complexity of O(n^2)
  class Solution {
     public char getMaxOccuringChar(String s) {
         int n = s.length();
@@ -28,7 +28,7 @@ brute force approach with time complexity of
     }
 }
 
-sliding window approach with time complexity of 
+sliding window approach with time complexity of O(n)
 class Solution {
     public char getMaxOccuringChar(String s) {
         int n = s.length();
@@ -57,11 +57,11 @@ class Solution {
         }
         return ans;
     
-                
+                        
     }
 }
 
-frequency array approach with time complexity of 
+frequency array approach with time complexity of O(n)
 class Solution {
     public char getMaxOccuringChar(String s) {
         int n = s.length();
@@ -95,7 +95,7 @@ public class mostFrequentChar {
         System.out.println("The most frequent character in the string is: " + mostFrequent);
         sc.close();
     }
-    // naive approach
+    // naive approach with time complexity of O(n^2)
     static char findMostFrequentChar(String str){
         int[] freq = new int[256]; // assuming ASCII characters
         for(int i=0; i<str.length(); i++){
@@ -111,7 +111,7 @@ public class mostFrequentChar {
         }
         return mostFrequentChar;
     }
-    // sliding window approach
+    // sliding window approach with time complexity of O(n)
     static char findMostFrequentCharSlidingWindow(String str){
         int[] freq = new int[256]; // assuming ASCII characters
         int maxFreq = 0;
@@ -125,7 +125,7 @@ public class mostFrequentChar {
         }
         return mostFrequentChar;
     }
-    // frequency array approach
+    // frequency array approach with time complexity of O(n)
     static char findMostFrequentCharFrequencyArray(String str){
         int[] freq = new int[256]; // assuming ASCII characters
         for(int i=0; i<str.length(); i++){
