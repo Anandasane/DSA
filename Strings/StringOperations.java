@@ -1,7 +1,7 @@
-package strings;
+import java.util.Scanner;
 
-public class StringOperations       ~ {
 
+public class StringOperations{
     static void printString(String str){
         int n = str.length();
         for(int i= 0; i<n;i++){
@@ -54,9 +54,9 @@ static int getLengthOfString(String str){
     }
     
     static boolean isPallindrome2(String str){//using binary search approach
-        int lo = 0 , hi = s.length()-1;
+        int lo = 0 , hi = str.length()-1;
         while(lo<= hi){
-            if(s.charAt(lo)!=s.charAt(hi))return false;
+            if(str.charAt(lo)!=str.charAt(hi))return false;
             lo++;
             hi--;   
         }

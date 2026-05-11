@@ -1,5 +1,3 @@
-package strings;
-
 import java.util.Scanner;
 
 /*
@@ -16,10 +14,12 @@ public class String1 {
         System.out.println("Provide the String content: ");
         String str = sc.nextLine();
         System.out.println("value of the string: "+ str);
-
+        System.out.println("length of the string: "+ str.length());
+        System.out.println("Enter the string1: ");
         String name1 = sc.nextLine();
+        System.out.println("Enter the string2: ");
         String name2 = sc.nextLine();
-        if(name1==name2){
+        if(name1 == name2){
             System.out.println("both string are equal");
         }
         else{
