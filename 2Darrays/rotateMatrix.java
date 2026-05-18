@@ -29,14 +29,18 @@ public class rotateMatrix {
             }
         }
 
+        rotate(Mat, M, N);
+        sc.close();
+    }
+    
+    static void rotate(int[][] Mat, int M, int N){
         for(int i=0; i<M; i++){
             for(int j=0; j<N; j++){
                 System.out.print(Mat[M-1-j][i] + " ");
             }
             System.out.println();
         }
-        
     }
-    
+
 
 }

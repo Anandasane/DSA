@@ -2,10 +2,13 @@ import java.util.ArrayList;
 
 public class arraylis {
     public static void main(String[] args) {
+
         ArrayList<Integer> a = new ArrayList<>();
-        a.add(3);a.add(13);a.add(23);a.add(33);
+        a.add(1);a.add(11);a.add(21);a.add(31);
+
         ArrayList<Integer> b = new ArrayList<>();
         b.add(4);b.add(14);b.add(24);b.add(34);
+
         ArrayList<Integer> c = new ArrayList<>();
         c.add(5);c.add(15);c.add(25);c.add(35);
 
@@ -33,5 +36,22 @@ public class arraylis {
             System.out.println();
         }
 
+    }
+    public List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> triangle = new ArrayList<>();
+
+        for (int i = 0; i < numRows; i++) {
+            List<Integer> row = new ArrayList<>();
+            for (int j = 0; j <= i; j++) {
+                if (j == 0 || j == i) {
+                    row.add(1);
+                } else {
+                    row.add(triangle.get(i - 1).get(j - 1) + triangle.get(i - 1).get(j));
+                }
+            }
+            triangle.add(row);
+        }
+
+        return triangle;
     }
 }
