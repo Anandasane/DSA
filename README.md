@@ -87,6 +87,8 @@ The repository follows a **pattern-based approach** for efficient learning.
 - Combination Sum  
 - Generate Parentheses  
 - Palindrome Partitioning  
+- `oneToN.java` - Print numbers 1 to N using recursion
+- `powerlinear.java` - Calculate power of a number using recursion
 
 ### 🔹 14. Trees & Binary Trees
 - Traversals (Inorder, Preorder, Postorder)  
@@ -99,3 +101,25 @@ The repository follows a **pattern-based approach** for efficient learning.
 
 ## 📂 Repository Structure
 
+```text
+├── arrays/           # 42 files - Array problems and implementations
+├── strings/          # 18 files - String manipulation and algorithms
+├── recursion/        # 4 files - Recursive problem solutions
+├── searching/        # 15 files - Binary search and searching algorithms
+├── sorting/          # 10 files - Sorting algorithm implementations
+├── 2Darrays/         # 19 files - 2D array and matrix problems
+├── collections/      # 2 files - Java Collections framework examples
+└── oops/             # 69 files - Object-oriented programming concepts
+```
+
+## 📊 File Statistics
+- **Total Problems**: 125+
+- **Languages**: Java
+- **Last Updated**: June 2026
+
+---
+
+## 🛠️ How to Use
+1. Clone the repository
+2. Navigate to specific topic folders
+3. Run Java files: `javac FileName.java && java FileName`
