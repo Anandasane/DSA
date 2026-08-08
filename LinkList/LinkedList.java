@@ -1,3 +1,20 @@
+
+ public class DisplayList{
+        public  static void displayRec(Node head){
+            if(head == null){
+                return;
+            }
+            System.out.print(head.data + " ");
+            displayRec(head.next);
+        }
+    }
+
+
+
+
+
+
+
 public class LinkedList {
     Node head; // Head of the list
 
@@ -66,9 +83,29 @@ public class LinkedList {
         return list;
     }
 
+   
     // Main method to test the code
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
+        
+        Node a = new Node(10);
+        Node b = new Node(20);
+        Node c = new Node(30);
+        Node d = new Node(40);
+        Node e = new Node(50);
+
+
+        a.next = b;
+        b.next = c;
+        c.next = d;
+        d.next =e;
+        
+        System.out.println(a.data);
+        
+        System.out.println(a.next);
+        System.out.println(a.next.data);
+
+
 
         // Insert values
         list = insert(list, 1);
@@ -85,5 +122,7 @@ public class LinkedList {
 
         // Delete key 10 (not present)
         list = deleteByKey(list, 10);
+
+        displayRec(a);
     }
 }   
