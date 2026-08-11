@@ -83,7 +83,7 @@ public class LinkedList {
         for(int i=0;i<=idx;i++){
             temp=temp.next;
         }
-        return temp.val;
+        return temp.data;
     }
 
    
@@ -127,6 +127,10 @@ public class LinkedList {
         list = deleteByKey(list, 10);
 
         displayRec(a);
-        System.out.println(get(a, 3));
+
+
+        
+        System.out.print(get(a,2));
+
     }
 }   
