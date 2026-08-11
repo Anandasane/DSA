@@ -1,17 +1,4 @@
 
- public class DisplayList{
-        public  static void displayRec(Node head){
-            if(head == null){
-                return;
-            }
-            System.out.print(head.data + " ");
-            displayRec(head.next);
-        }
-    }
-
-
-
-
 
 
 
@@ -83,6 +70,22 @@ public class LinkedList {
         return list;
     }
 
+    public  static void displayRec(Node head){
+            if(head == null){
+                return;
+            }
+            System.out.print(head.data + " ");
+            displayRec(head.next);
+        }
+    
+    public static int get(Node head,int idx){
+        Node temp = head;
+        for(int i=0;i<=idx;i++){
+            temp=temp.next;
+        }
+        return temp.val;
+    }
+
    
     // Main method to test the code
     public static void main(String[] args) {
@@ -124,5 +127,6 @@ public class LinkedList {
         list = deleteByKey(list, 10);
 
         displayRec(a);
+        System.out.println(get(a, 3));
     }
 }   
