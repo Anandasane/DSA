@@ -78,18 +78,39 @@ public class LinkedList {
             displayRec(head.next);
         }
     
-    public static int get(Node head,int idx){
-        Node temp = head;
-        for(int i=0;i<=idx;i++){
-            temp=temp.next;
-        }
-        return temp.data;
-    }
+    // private static int get(Node head,int idx){
+    //     Node temp = head;
+    //     for(int i=0;i<=idx;i++){
+    //         temp=temp.next;
+    //     }
+    //     return temp.data;
+    // }
 
    
     // Main method to test the code
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
+        
+        
+        
+        
+        // Insert values
+        list = insert(list, 1);
+        list = insert(list, 2);
+        list = insert(list, 3);
+        list = insert(list, 4);
+        
+        // Print list
+        printList(list);
+        
+        // Delete key 3
+        list = deleteByKey(list, 3);
+        printList(list);
+
+        // Delete key 10 (not present)
+        list = deleteByKey(list, 10);
+
+        System.out.println("--------------------------------------------------------------------------------------------------");
         
         Node a = new Node(10);
         Node b = new Node(20);
@@ -103,34 +124,23 @@ public class LinkedList {
         c.next = d;
         d.next =e;
         
-        System.out.println(a.data);
-        
         System.out.println(a.next);
+        System.out.println(a.data);
         System.out.println(a.next.data);
 
 
-
-        // Insert values
-        list = insert(list, 1);
-        list = insert(list, 2);
-        list = insert(list, 3);
-        list = insert(list, 4);
-
-        // Print list
-        printList(list);
-
-        // Delete key 3
-        list = deleteByKey(list, 3);
-        printList(list);
-
-        // Delete key 10 (not present)
-        list = deleteByKey(list, 10);
-
         displayRec(a);
+        System.out.println();
+        System.out.println(get(a,2));
+
+    }
 
 
-        
-        System.out.print(get(a,2));
-
+    private static int get(Node head,int idx){
+        Node temp = head;
+        for(int i=1;i<=idx;i++){
+            temp=temp.next;
+        }
+        return temp.data;
     }
 }   
