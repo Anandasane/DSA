@@ -9,9 +9,19 @@ class Node{//user define data type
 } 
 
 class Linkedlist{// user define data Structue
+
     Node head;
     Node tail;
     int size;
+
+    int get(int idx){
+        Node temp = head;
+        for(int i=1;i<=idx;i++){
+            temp = temp.next;
+        }
+        return temp.data;
+    }
+
     int search(int data){
         if(head==null) return -1;
         Node temp = head;
@@ -82,6 +92,9 @@ class Linkedlist{// user define data Structue
             size++;
         }
     }
+     
+     
+
 
 }
 
@@ -103,9 +116,8 @@ public class LinkedListDataStructure {
         l1.display();
         System.out.println(l1.size);
 
-        l1.insert(100, 3);
-        l1.display();
-
+        l1.insert(100, 3); l1.display();
+        System.out.print(l1.get(6)); 
     }
 }
 
