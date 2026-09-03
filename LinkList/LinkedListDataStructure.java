@@ -93,7 +93,24 @@ class Linkedlist{// user define data Structue
         }
     }
      
-     
+     void delete(int idx){
+        if(idx<0 || idx>=size) {
+            System.out.println("Invalid index! ");
+            return;
+        }
+        if(idx==0){
+            deletAtHead();
+            return;
+        }
+        Node temp = head;
+        for(int i=1;i<= idx;i++){
+            temp=temp.next;
+            
+        }
+        temp.next=temp.next.next;// deleting the node
+        if(idx== size-1) tail=temp;// we are deleting the tail
+        size--;
+     }
 
 
 }
@@ -118,6 +135,13 @@ public class LinkedListDataStructure {
 
         l1.insert(100, 3); l1.display();
         System.out.print(l1.get(6)); 
+        
+        l1.delete(3);l1.display();
+
+        
+
+
+
     }
 }
 

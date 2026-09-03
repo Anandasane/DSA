@@ -1,4 +1,4 @@
-package oops.Abstraction;
+
 
 /**
  * ABSTRACT CLASS EXAMPLE - Animal
