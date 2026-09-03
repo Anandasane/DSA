@@ -27,17 +27,17 @@ Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
 public class kadane {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println('Enter the size of the Array: ');
+        System.out.println("Enter the size of the Array: ");
         int n= sc.nextInt();
-        arr[] = new arr[n];
+        int arr[] = new int[n];
         System.out.println("Enter a the elements of the Array: ");
         for(int i=0;i<n;i++){
             arr[i]=sc.nextInt();
         }
 
-        
+        System.out.println(maxSubArray(arr));
     }
-    public int maxSubArray(int[] nums) {
+    public static int maxSubArray(int[] nums) {
         int sum=0;
         int maxi=Integer.MIN_VALUE;
 
