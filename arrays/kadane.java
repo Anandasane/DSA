@@ -34,7 +34,7 @@ public class kadane {
         for(int i=0;i<n;i++){
             arr[i]=sc.nextInt();
         }
-
+        sc.close();
         System.out.println(maxSubArray(arr));
     }
     public static int maxSubArray(int[] nums) {
