@@ -2,34 +2,28 @@ import java.util.Stack;
 
 public class Balance_Bracket {
     public static void main(String[] args) {
-        Stack<Character> st = new Stack<>();
-        for(int i=0; i<st.length();i++){
-            char ch=st.charAt(i);
-            if(ch=='c'||ch=='['||ch=='{') st.push(ch);
-            else{ // choosing bracket 
-                if(st.isEmpty()){
-                    System.out.println("Not Balanced");
-                    return;
-                }
-                char top=st.peek();
-                if((ch==')' && top=='(') || (ch==']' && top=='[') || (ch=='}' && top=='{')){
-                    st.pop();
-                }
-                // if(sameStyle(ch,top)){
-                //     st.pop();
-                // }
-                else{
-                    System.out.println("Not Balanced");
-                    return;
-                }
-            }
-        }
+
     }
-    
-        // static boolean sameStyle(char a, char b){
-        //     if(a=='('&& b==')') return true;
-        //     if(a=='['&& b==']') return true;
-        //     if(a=='{'&& b=='}') return true;
-        //     return false;
-        // }
+    public boolean isBalanced(String s) {
+        Stack<Character> st = new Stack<>();
+               for(int i=0; i<s.length();i++){
+                   char ch=s.charAt(i);
+                   if(ch=='('||ch=='['||ch=='{') st.push(ch);
+                   else{ // closing bracket 
+                       if(st.size()==0) return false;
+                       char top=st.peek();
+                        if(sameStyle(top,ch))st.pop();
+                           else return false;
+                   }
+               }
+               return(st.size()==0);
+        
+    }
+    static boolean sameStyle(char a, char b){
+            if(a=='('&& b==')') return true;
+            if(a=='['&& b==']') return true;
+            if(a=='{'&& b=='}') return true;
+            return false;
+        }
 }
+
