@@ -10,6 +10,7 @@ class Node {
 class MyStack{
     Node head;
     int len;
+    
     int peek(){
         if(head==null){
             System.out.println("Stack is Empty!");
